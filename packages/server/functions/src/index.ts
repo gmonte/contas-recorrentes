@@ -1,15 +1,15 @@
 import bodyParser from 'body-parser'
 import cors from 'cors'
-import express from 'express'
-import functions from 'firebase-functions'
+import express, { Application } from 'express'
+import { https, logger } from 'firebase-functions'
 
-const app: express.Application = express()
+const app: Application = express()
 
 app.use(cors)
 
 app.use(bodyParser.json())
 
-export const helloWorld = functions.https.onRequest((request, response) => {
-  functions.logger.info('Hello logs!', { structuredData: true })
+export const helloWorld = https.onRequest((request, response) => {
+  logger.info('Hello logs!', { structuredData: true })
   response.send('Hello from Firebase!')
 })

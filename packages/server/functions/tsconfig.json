@@ -5,7 +5,8 @@
     "noUnusedLocals": true,
     "outDir": "lib",
     "sourceMap": true,
-    "strict": true
+    "strict": true,
+    "noEmit": false
   },
   "compileOnSave": true,
   "include": ["./src/**/*"]
