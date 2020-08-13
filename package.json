@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "name": "monorepo-ts",
+  "license": "MIT",
+  "author": "Guilherme Monte <gmonte@inf.ufsm.br>",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@monorepo-ts/eslint-config": "*",
+    "commitizen": "^4.0.3",
+    "cz-lerna-changelog": "2.0.2",
+    "husky": "^4.2.5",
+    "lerna": "^3.22.1",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "lint": "lerna run --parallel lint --"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint --quiet",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  }
+}
