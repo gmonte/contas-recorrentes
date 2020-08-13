@@ -1,9 +1,15 @@
-// import * as functions from 'firebase-functions'
+import bodyParser from 'body-parser'
+import cors from 'cors'
+import express from 'express'
+import functions from 'firebase-functions'
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info('Hello logs!', { structuredData: true })
-//   response.send('Hello from Firebase!')
-// })
+const app: express.Application = express()
+
+app.use(cors)
+
+app.use(bodyParser.json())
+
+export const helloWorld = functions.https.onRequest((request, response) => {
+  functions.logger.info('Hello logs!', { structuredData: true })
+  response.send('Hello from Firebase!')
+})
