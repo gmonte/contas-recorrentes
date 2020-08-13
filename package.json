@@ -1,18 +1,19 @@
 {
   "private": true,
-  "name": "monorepo-ts",
+  "name": "contas-recorrentes",
   "author": "Guilherme Monte <gmonte@inf.ufsm.br>",
-  "description": "Kick off lerna monorepo with typescript, eslint, commitlint and jest",
+  "description": "Solution to schedule recurring payments reminders",
   "license": "MIT",
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/*",
+      "packages/server/functions"
     ]
   },
   "devDependencies": {
+    "@contas-recorrentes/eslint-config": "*",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@monorepo-ts/eslint-config": "*",
     "@types/jest": "^26.0.9",
     "commitizen": "^4.0.3",
     "cz-lerna-changelog": "2.0.2",

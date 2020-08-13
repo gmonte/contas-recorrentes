@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@monorepo-ts/eslint-config",
+  "name": "@contas-recorrentes/eslint-config",
   "version": "0.0.0",
   "main": ".eslintrc.js",
   "license": "MIT",
