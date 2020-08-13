@@ -3,5 +3,8 @@
   "name": "@monorepo-ts/demo",
   "version": "0.0.0",
   "main": "src/index.ts",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --cache ./src"
+  }
 }
