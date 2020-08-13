@@ -11,6 +11,7 @@ spec/
 coverage/
 flow/
 
+dist/
 build/
 config/
 scripts/
@@ -18,3 +19,6 @@ scripts/
 gulpfile.js
 
 .gitignore
+
+.eslintrc.js
+packages/**/*.js

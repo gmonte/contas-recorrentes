@@ -1,8 +1,9 @@
 {
   "private": true,
   "name": "monorepo-ts",
-  "license": "MIT",
   "author": "Guilherme Monte <gmonte@inf.ufsm.br>",
+  "description": "Kick off lerna monorepo with typescript, eslint, commitlint and jest",
+  "license": "MIT",
   "workspaces": {
     "packages": [
       "packages/*"
@@ -12,18 +13,22 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@monorepo-ts/eslint-config": "*",
+    "@types/jest": "^26.0.9",
     "commitizen": "^4.0.3",
     "cz-lerna-changelog": "2.0.2",
     "husky": "^4.2.5",
+    "jest": "^26.4.0",
     "lerna": "^3.22.1",
+    "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "lint": "lerna run --parallel lint --"
+    "lint": "lerna run --parallel lint --",
+    "jest": "jest"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint --quiet",
+      "pre-commit": "yarn lint --quiet && yarn jest",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }

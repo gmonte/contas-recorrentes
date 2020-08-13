@@ -37,7 +37,7 @@ module.exports = {
           '/^redux/',
           '/^lodash/',
           'module',
-          '/^@contas-recorrentes/',
+          '/^@monorepo-ts/',
           ['parent', 'sibling', 'index']
         ],
         alphabetize: {
