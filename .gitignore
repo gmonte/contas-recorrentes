@@ -3,3 +3,5 @@ dist
 .history
 
 .DS_Store
+
+.eslintcache
