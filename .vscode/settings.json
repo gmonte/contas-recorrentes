@@ -1,0 +1,24 @@
+{
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true,
+    "source.fixAll.eslint": true
+  },
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  "prettier.requireConfig": true,
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".mdx"
+    ]
+  },
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact",
+    "markdown",
+    "mdx"
+  ],
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+}

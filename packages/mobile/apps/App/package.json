@@ -1,0 +1,33 @@
+{
+  "name": "@contas-recorrents/app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./scripts/start.js",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "build:android": "node ./scripts/build.android.js",
+    "assembleRelease": "cd android && ./gradlew assembleRelease",
+    "clean": "yarn clean:watchman && yarn clean:ios && yarn clean:android",
+    "clean:watchman": "watchman watch-del-all",
+    "clean:ios": "cd ios && xcodebuild clean",
+    "clean:android": "cd android && ./gradlew clean",
+    "lint": "eslint --cache . --ext .ts --ext .tsx",
+    "install:ios": "npx pod-install"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-native": "0.63.3",
+    "react-native-dotenv": "^2.3.0",
+    "react-native-svg": "^12.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@types/react-native": "^0.63.2",
+    "babel-plugin-root-import": "^6.5.0",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-native-svg-transformer": "^0.14.3"
+  }
+}

@@ -1,5 +1,13 @@
 {
-  "packages": ["packages/*", "packages/server/functions"],
+  "packages": [
+    "configs/*",
+    "packages/core/*",
+    "packages/mobile/*",
+    "packages/mobile/apps/*",
+    "packages/web/*",
+    "packages/web/apps/*",
+    "packages/server/*"
+  ],
   "version": "0.0.0",
   "npmClient": "yarn",
   "useWorkspaces": true

@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "@contas-recorrentes/env-config",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "yargs": "^15.4.1"
+  }
+}

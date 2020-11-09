@@ -6,7 +6,7 @@ node_modules/
 .vscode/
 .history/
 npm-debug.log
-jsconfig.json
+tsconfig.json
 spec/
 coverage/
 flow/
@@ -21,4 +21,5 @@ gulpfile.js
 .gitignore
 
 .eslintrc.js
+configs/**/*.js
 packages/**/*.js

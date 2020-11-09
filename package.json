@@ -6,30 +6,30 @@
   "license": "MIT",
   "workspaces": {
     "packages": [
-      "packages/*",
-      "packages/server/functions"
+      "configs/*",
+      "packages/core/*",
+      "packages/mobile/*",
+      "packages/mobile/apps/*",
+      "packages/web/*",
+      "packages/web/apps/*",
+      "packages/server/*"
     ]
   },
   "devDependencies": {
-    "@contas-recorrentes/eslint-config": "*",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@types/jest": "^26.0.9",
     "commitizen": "^4.0.3",
     "cz-lerna-changelog": "2.0.2",
     "husky": "^4.2.5",
-    "jest": "^26.4.0",
     "lerna": "^3.22.1",
-    "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "lint": "lerna run --parallel lint --",
-    "jest": "jest"
+    "lint": "lerna run --parallel lint --"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint --quiet && yarn jest",
+      "pre-commit": "yarn lint --quiet",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
@@ -38,5 +38,8 @@
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
   }
 }
