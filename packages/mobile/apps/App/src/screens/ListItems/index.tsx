@@ -3,10 +3,10 @@ import { View, Text } from 'react-native'
 
 // import { Container } from './styles';
 
-const Teste: React.FC = () => (
+const ListItems: React.FC = () => (
   <View>
-    <Text>teste</Text>
+    <Text>aqui</Text>
   </View>
 )
 
-export default Teste
+export default ListItems

@@ -9,27 +9,18 @@
  */
 
 import React from 'react'
-import {
-  SafeAreaView,
-  ScrollView,
-  View,
-  StatusBar,
-} from 'react-native'
+import { StatusBar } from 'react-native'
 
-import Test from '~/asd/Teste'
+import Screens from '~/screens/routes'
+
+import 'react-native-gesture-handler'
 
 declare const global: { HermesInternal: null | {} }
 
 const App: React.FC = () => (
   <>
     <StatusBar barStyle="dark-content" />
-    <SafeAreaView>
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Test />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <Screens />
   </>
 )
 
